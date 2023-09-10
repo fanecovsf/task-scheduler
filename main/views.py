@@ -12,7 +12,13 @@ class MainViews:
 
 
     def panel(request):
-        return HttpResponse('Online')
+        tasks = TaskServices.query_all()
+        return render(request, 'panel.html', context={
+            'tasks':tasks
+        })
+    
+    def task_register(request):
+        return render(request, 'task-register.html')
 
 
 class ApiViews:
@@ -35,6 +41,12 @@ class ApiViews:
                 return Response(serializer.data, status=status.HTTP_201_CREATED)
             else:
                 return Errors.bad_request('data format is not valid')
+            
+        def delete(self, request):
+            return Errors.not_allowed()
+        
+        def put(self, request):
+            return Errors.not_allowed()
             
 
     class TaskDetailAPI(APIView):
@@ -74,6 +86,9 @@ class ApiViews:
                     return Response(data=serializer.data, status=status.HTTP_202_ACCEPTED)
                 else:
                     return Errors.bad_request('data format is not valid')
+                
+        def post(self, request):
+            return Errors.not_allowed()
 
 
     

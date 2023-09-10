@@ -1,0 +1,92 @@
+/* Definindo variáveis de cor */
+:root {
+    --bg-color: #444654;
+    --text-color: yellow;
+}
+
+/* Definindo estilos globais */
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Estilizando .main-container */
+.main-container {
+    text-align: left;
+    padding: 20px;
+    background-color: var(--bg-color);
+}
+
+/* Estilizando o h1 */
+.main-container h1 {
+    font-size: 2rem;
+    margin: 20px 0;
+    text-align: center;
+}
+
+/* Estilizando botão "Register task" */
+.btn-reg {
+    display: block;
+    margin: 30px auto 10px; /* Centralizar horizontalmente e ajustar margem superior e inferior */
+    text-align: center; /* Centralizar texto horizontalmente */
+    padding: 10px 20px;
+    text-decoration: none;
+    color: var(--text-color);
+    background-color: var(--bg-color);
+    border: 2px solid var(--text-color);
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    width: 150px;
+}
+
+/* Hover sombreado para botão "Register task" */
+.btn-reg:hover {
+    background-color: var(--text-color);
+    color: var(--bg-color);
+    transform: scale(1.05);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Estilizando o formulário */
+.container {
+    margin-top: 20px;
+    max-width: 500px; /* Largura máxima do formulário */
+    margin: 0 auto; /* Centralizar o formulário horizontalmente */
+}
+
+/* Estilizando rótulos e campos de entrada */
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input[type="text"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid var(--text-color);
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+/* Estilizando o botão de registro */
+button[type="submit"] {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    border: 2px solid var(--text-color);
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+/* Hover sombreado para o botão de registro */
+button[type="submit"]:hover {
+    background-color: var(--text-color);
+    color: var(--bg-color);
+    transform: scale(1.05);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+}

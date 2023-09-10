@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{% static 'styles/style-register.css' %}">
+    <title>Control panel</title>
+</head>
+<body>
+
+    <div class="main-container">
+        <h1>Task register</h1>
+    </div>
+
+    <div class="container">
+        <h2>Register a New Task</h2>
+        <form id="task-form">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="path">Path:</label>
+            <input type="text" id="path" name="path" required>
+
+            <label for="description">Description:</label>
+            <textarea id="description" name="description"></textarea>
+
+            <label for="schedule_param">Schedule Parameter:</label>
+            <input type="text" id="schedule_param" name="schedule_param">
+
+            <button type="submit" class="btn btn-reg">Register</button>
+        </form>
+    </div>
+    
+</body>
+</html>

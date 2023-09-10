@@ -28,3 +28,11 @@ class Errors:
         }
 
         return Response(data=data, status=status.HTTP_204_NO_CONTENT)
+    
+    @staticmethod
+    def not_allowed():
+        data = {
+            'error':'method not allowed'
+        }
+
+        return Response(data=data, status=status.HTTP_405_METHOD_NOT_ALLOWED)
