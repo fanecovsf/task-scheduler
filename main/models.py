@@ -14,3 +14,10 @@ class Task(models.Model):
     next_execution = models.DateTimeField(null=True, blank=True)
     executions = models.IntegerField()
     active = models.BooleanField(blank=False, null=False)
+
+
+class TaskExecutions(models.Model):
+
+
+    task = models.ForeignKey(Task, on_delete=models.CASCADE)
+    execution_date = models.DateTimeField(null=False, blank=False)
