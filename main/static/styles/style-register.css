@@ -1,7 +1,7 @@
 /* Definindo variáveis de cor */
 :root {
     --bg-color: #444654;
-    --text-color: yellow;
+    --text-color: rgb(166, 217, 255);
 }
 
 /* Definindo estilos globais */
@@ -40,6 +40,7 @@ body {
     border-radius: 5px;
     transition: all 0.3s ease;
     width: 150px;
+    cursor: pointer;
 }
 
 /* Hover sombreado para botão "Register task" */

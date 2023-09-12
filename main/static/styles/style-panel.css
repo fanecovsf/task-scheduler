@@ -1,7 +1,7 @@
 /* Definindo variáveis de cor */
 :root {
     --bg-color: #444654;
-    --text-color: yellow;
+    --text-color: rgb(166, 217, 255);
 }
 
 /* Definindo estilos globais */
@@ -81,22 +81,19 @@ th, td {
     border: none;
     cursor: pointer;
     transition: all 0.3s ease;
-}
-
-.btn-det {
     text-decoration: none;
 }
 
 /* Hover sombreado para botão "Run task" */
-.btn-run:hover {
+.btn:hover {
     background-color: var(--text-color);
     color: var(--bg-color);
-    transform: scale(1.05);
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
 }
 
 /* Estilizando os botões dentro da tabela */
-table button {
+table button, a {
+    font-size: 18px;
     padding: 5px 10px;
     background-color: var(--bg-color);
     color: var(--text-color);
@@ -110,6 +107,11 @@ table button {
 table button:hover {
     background-color: var(--text-color);
     color: var(--bg-color);
-    transform: scale(1.05);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+}
+
+table a:hover {
+    background-color: var(--text-color);
+    color: var(--bg-color);
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
 }

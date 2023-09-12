@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="{% static 'styles/style-register.css' %}">
+    <script src="{% static 'js/main.js' %}"></script>
     <title>Control panel</title>
 </head>
 <body>
@@ -28,7 +29,7 @@
             <label for="schedule_param">Schedule Parameter:</label>
             <input type="text" id="schedule_param" name="schedule_param">
 
-            <button type="submit" class="btn btn-reg">Register</button>
+            <button type="button" class="btn btn-reg" onclick="registerTask()">Register</button>
         </form>
     </div>
     
