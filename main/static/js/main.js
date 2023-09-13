@@ -70,9 +70,8 @@ async function tasks() {
         
         // Attach a click event listener to the "Run task" button
         runButton.addEventListener('click', function() {
-            const path = task.id;
             fetch(domain + '/api/task/execute/' + String(task.id))
-            console.log('Running task with path:', path);
+            location.reload()
         });
 
         runCell.appendChild(runButton);
@@ -93,7 +92,20 @@ async function tasks() {
         detailsCell.innerHTML = '<a href="#" class="btn btn-det">Details</a>';
 
         const deleteCell = document.createElement('td');
-        deleteCell.innerHTML = '<button type="button" class="btn btn-del">Delete task</button>';
+
+        const deleteButton = document.createElement('button');
+        deleteButton.type = 'button';
+        deleteButton.className = 'btn btn-delete';
+        deleteButton.textContent = 'Delete task';
+
+        deleteCell.appendChild(deleteButton)
+
+        deleteButton.addEventListener('click', function() {
+            fetch(domain + '/api/task/' + String(task.id), {
+                method:'DELETE'
+            })
+            location.reload()
+        });
 
         // Append the cells to the row
         row.appendChild(runCell);
