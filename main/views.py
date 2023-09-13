@@ -6,6 +6,7 @@ from main.services import TaskServices
 from main.serializer import TaskSerializer
 from main.models import Task
 from main.errors import Errors
+from main.utils import Utils
 
 
 class MainViews:
@@ -90,5 +91,14 @@ class ApiViews:
         def post(self, request):
             return Errors.not_allowed()
 
+    
+    class TaskExecutionAPI(APIView):
 
+
+        def get(self, request, id):
+            task = TaskServices.get(id)
+
+            Utils.execute_task(task.path)
+
+            return Response(data={'Execução':'Ok'}, status=status.HTTP_200_OK)
     

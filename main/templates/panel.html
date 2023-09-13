@@ -5,10 +5,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="{% static 'styles/style-panel.css' %}">
-    <script src="{% static 'js/panel.js' %}"></script>
+    <script src="{% static 'js/main.js' %}"></script>
     <title>Control panel</title>
 </head>
-<body>
+<body onload="tasks()">
 
     <div class="main-container">
         <h1>Control panel</h1>
@@ -29,19 +29,7 @@
                 <th></th>
             </tr>
             <tb>
-                <td>
-                    <button type="button" class="btn btn-run" id="btn-run">Run task</button>
-                </td>
-                <td>{{ tasks.name }}</td>
-                <td>{{ tasks.schedule_param }}</td>
-                <td>{{ tasks.last_execution }}</td>
-                <td>{{ tasks.next_execution }}</td>
-                <td>
-                    <a href="#" class="btn btn-det">Details</a>
-                </td>
-                <td>
-                    <button type="button" class="btn btn-del">Delete task</button>
-                </td>
+                
             </tb>
         </table>
     </div>

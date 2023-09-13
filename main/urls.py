@@ -7,4 +7,5 @@ urlpatterns = [
 
     path('api/task', ApiViews.TaskAPI.as_view(), name='task_api'),
     path('api/task/<id>', ApiViews.TaskDetailAPI.as_view(), name='task_detail_api'),
+    path('api/task/execute/<id>', ApiViews.TaskExecutionAPI.as_view(), name='task_execution_api')
 ]
